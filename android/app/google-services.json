@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "234179407636",
+    "project_id": "fir-intro-8fbed",
+    "storage_bucket": "fir-intro-8fbed.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:234179407636:android:f3b3cf0554ea8814685c01",
+        "android_client_info": {
+          "package_name": "com.example.firebase_intro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0AWtux2uF2Z2S-nRm48vvqVCHKvqTh9U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
