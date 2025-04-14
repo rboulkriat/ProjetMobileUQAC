@@ -74,6 +74,8 @@ flutter:
     - assets/patisserie/produits_gourmets/
     - assets/snacks/
     - assets/snacks/boissons/
+    - assets/snacks/sucres/
+    - assets/snacks/sales/
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
