@@ -207,7 +207,7 @@ class _StructurePageState extends State<StructurePage>
         width: MediaQuery
             .of(context)
             .size
-            .width * 0.7, // Ajustez la largeur du Drawer selon vos besoins
+            .width * 0.7,
         child: _buildDrawer(),
       ),
     );

@@ -104,7 +104,7 @@ class _PanierWidgetState extends State<PanierWidget> {
               child: ListTile(
                 leading: GestureDetector(
                   onTap: () {
-                    // Votre logique pour afficher les détails du produit
+
                   },
                   child: Image.asset(
                     product['image'],
