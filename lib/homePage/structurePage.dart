@@ -127,13 +127,13 @@ class _StructurePageState extends State<StructurePage>
                     _buildDrawerSousItem(
                       title: 'Chocolats',
                       onTap: () {
-                        _navigateTo('NosDelicesALaPiece');
+                        _navigateTo('NosChocolats');
                       },
                     ),
                     _buildDrawerSousItem(
                       title: 'Bonbons',
                       onTap: () {
-                        _navigateTo('NosDelicesLesSables');
+                        _navigateTo('NosBonbons');
                       },
                     ),
                   ],
@@ -163,11 +163,15 @@ class _StructurePageState extends State<StructurePage>
       case 'MenuPrincipal':
         return MainPage();
       case 'NosSucre':
-        return ProductCategoryPage(categories: ['Salé']);
+        return ProductCategoryPage(categories: ['Bonbon', 'Chocolat']);
       case 'NosSale':
         return  ProductCategoryPage(categories: ['Salé']);
       case 'NosBoissons':
         return ProductCategoryPage(categories: ['Boisson']);
+      case 'NosChocolats':
+        return ProductCategoryPage(categories: ['Chocolat']);
+      case 'NosBonbons':
+        return ProductCategoryPage(categories: ['Bonbon']);
       case 'ProduitDetail':
         return ProductDetailsPage(_productInfo);
       case 'Panier':

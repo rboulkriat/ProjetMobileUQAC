@@ -58,20 +58,6 @@ dev_dependencies:
 flutter:
   assets:
     - assets/
-    - assets/partenaires/
-    - assets/boutiques/
-    - assets/patisserie/evenements/mariage/
-    - assets/patisserie/evenements/pieces_montees/
-    - assets/patisserie/evenements/traiteur/
-    - assets/patisserie/nos_coffrets/boite_metalliques/
-    - assets/patisserie/nos_coffrets/coffrets_exclusifs/
-    - assets/patisserie/nos_coffrets/khomsa/
-    - assets/patisserie/nos_coffrets/la_rose_de_tunis/
-    - assets/patisserie/nos_coffrets/les_minis/
-    - assets/patisserie/nos_coffrets/les_plateaux/
-    - assets/patisserie/nos_delices/a_la_piece/
-    - assets/patisserie/nos_delices/les_sables/
-    - assets/patisserie/produits_gourmets/
     - assets/snacks/
     - assets/snacks/boissons/
     - assets/snacks/sucres/

@@ -137,6 +137,8 @@ class _ProductCategoryPageState extends State<ProductCategoryPage> {
               ),
               child: Image.asset(
                 product['image'],
+                height: 150, // Par exemple
+                width: double.infinity,
                 fit: BoxFit.cover,
               ),
             ),

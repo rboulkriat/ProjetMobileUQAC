@@ -1,13 +1,13 @@
-
 import 'package:flutter/material.dart';
 import '../../services/firebase_service.dart';
 import '../homePage/structurePage.dart';
+import '../../widgets/PanierWidget.dart';
 
 class ProductDetailsPage extends StatelessWidget {
   final Map<String, dynamic> productInfo;
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>(); // Clé unique
   final FirebaseAuthService _authService = FirebaseAuthService();
-
+  final Panier _panier = Panier();
   ProductDetailsPage(this.productInfo, {super.key});
 
   @override
@@ -114,6 +114,7 @@ class ProductDetailsPage extends StatelessWidget {
                   // Bouton "Ajouter au panier"
                   ElevatedButton(
                     onPressed: () {
+                      addToCart(context, productInfo);
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.purple,
@@ -352,75 +353,13 @@ class ProductDetailsPage extends StatelessWidget {
   }
 
 
-
-  Widget _buildCategoryCard({
-    required String title,
-    required String imagePath,
-    required VoidCallback onTap,
-  }) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        margin: EdgeInsets.symmetric(vertical: 10),
-        padding: EdgeInsets.all(16.0),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(12.0),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black12,
-              spreadRadius: 1,
-              blurRadius: 10,
-            ),
-          ],
-        ),
-        child: Row(
-          children: [
-            // Image à gauche
-            SizedBox(
-              width: 100.0,
-              height: 100.0,
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(12.0),
-                child: Image.asset(
-                  imagePath,
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
-            SizedBox(width: 16.0),
-            // Texte à droite
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    title,
-                    style: TextStyle(
-                      color: Colors.black87,
-                      fontSize: 18.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  SizedBox(height: 8.0),
-                  Text(
-                    'Some additional text',
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontSize: 16.0,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            IconButton(
-              onPressed: onTap,
-              icon: Icon(Icons.arrow_forward),
-              color: Colors.purple,
-            ),
-          ],
-        ),
+  void addToCart(BuildContext context, Map<String, dynamic> product) {
+    print('Produit ajouté au panier : ${product['name']}');
+    _panier.ajouterElement(product);
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text('Produit ajouté au panier : ${product['name']}'),
+        duration: Duration(seconds: 2),
       ),
     );
   }
